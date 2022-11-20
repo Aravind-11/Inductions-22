@@ -1,0 +1,78 @@
+body{
+    font-size: 3em;
+    background-color: floralwhite;
+    font-family: 'Sono', sans-serif;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.data input{
+    font-size: 2.5rem;
+    margin-left: 250px;
+    margin-bottom: 50px;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 3%;
+}
+
+span{
+    display: inline;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+span p{
+    float: left;
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+select{
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-right: 10px;
+    padding: 6px;
+}
+
+button{
+    float: right;
+    margin-top: 25px;
+    margin-right: 500px;
+    padding: 8px;
+    font-size: 2rem;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.getData{
+    border-style: solid;
+    padding: 30px;
+    width: 400px;
+    height: 130px;
+    border-radius: 10%;
+    margin-left: 40px;
+    margin-top: 70px;
+    font-size: 1.5rem;
+}
+.getData input{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    background-color: grey;
+    width: 360px;
+}
+.getData button{
+    float: left;
+    margin-top: 20px;
+    margin-left: 120px;
+    font-size: 1.2rem;
+}
+
+.prediction{
+    text-align: center;
+    margin-top: 10px;
+}
