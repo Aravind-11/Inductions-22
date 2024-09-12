@@ -1,0 +1,78 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Glass Classifier</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+    <body>
+        <div class="header">
+            <h1>
+            <p>GLASS CLASSIFIER</p>
+            </h1>
+        </div>
+        <div class="details">
+            <div class="container">
+                <div class="about">
+                    <p class="abouttitle">HOW DOES THIS WORK?</p>
+                    <p>The glass classifier basically takes input of the below mentioned attributes</p> 
+                    <p>Random Forest Classification to classify the given glass into one of the seven types of glasses</p>
+                </div>
+                <div class="dataset">
+                    <p>The attributes used for calculation are:</p>
+                    <ul class="set">
+                        <li><p>Refractive Index</p></li>
+                        <li><p>Percentage of Sodium (Na)</p></li>
+                        <li><p>Percentage of Magnesium (Mg)</p></li>
+                        <li><p>Percentage of Aluminium (Al)</p></li>
+                        <li><p>Percentage of Silicon (Si)</p></li>
+                        <li><p>Percentage of Potassium (K)</p></li>
+                        <li><p>Percentage of Calcium (Ca)</p></li>
+                        <li><p>Percentage of Barium (Ba)</p></li>
+                        <li><p>Percentage of Iron (Fe)</p></li>
+                    </ul>
+                    <p>Glasses are classified into the following seven types:</p>
+                    <ul class="classification">
+                        <li><p>Building windows (Float Processed)</p></li>
+                        <li><p>Building windows (Non Float Processed)</p></li>
+                        <li><p>Vehicle windows (Float Processed)</p></li>
+                        <li><p>Vehicle windows (Non Float Processed)</p></li>
+                        <li><p>Containers</p></li>
+                        <li><p>Tableware</p></li>
+                        <li><p>Headlamps</p></li>
+                    </ul>
+                </div>    
+            </div>
+            <div class="data">
+                <div class="inp">
+                    <p class="datatitle">ENTER THE REQUIRED VALUES</p>
+                    <div class="form">
+                        <form id="model_input" method="post" action="{% url 'prediction' %}">
+                            {% csrf_token %}
+                            <p>Enter refractive index of the glass</p>
+                            <input type="number" id="ri" name="ri" placeholder="Enter refractive index" required step="any" min=1 max=60>
+                            <p>Enter percentage of Na content in glass</p>
+                            <input type="number" id="na" name="na" placeholder="Enter percentage of Na" required step="any" min="0" max="80">
+                            <p>Enter percentage of Mg content in glass</p>
+                            <input type="number" id="mg" name="mg" placeholder="Enter percentage of Mg" required step="any" min="0" max="80">
+                            <p>Enter percentage of Al content in glass</p>
+                            <input type="number" id="al" name="al" placeholder="Enter percentage of Al" required step="any" min="0" max="80">
+                            <p>Enter percentage of Si content in glass</p>
+                            <input type="number" id="si" name="si" placeholder="Enter percentage of Si" required step="any" min="0" max="80">
+                            <p>Enter percentage of K content in glass</p>
+                            <input type="number" id="k" name="k" placeholder="Enter percentage of K" required step="any" min="0" max="80">
+                            <p>Enter percentage of Ca content in glass</p>
+                            <input type="number" id="ca" name="ca" placeholder="Enter percentage of Ca" required step="any" min="0" max="80">
+                            <p>Enter percentage of Ba content in glass</p>
+                            <input type="number" id="ba" name="ba" placeholder="Enter percentage of Ba" required step="any" min="0" max="80">
+                            <p>Enter percentage of fe content in glass</p>
+                            <input type="number" id="fe" name="fe" placeholder="Enter percentage of Fe" required step="any" min="0" max="80"><br><br>
+                            <button class="submit" type="submit" value="submit">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
